@@ -2,7 +2,7 @@ import axios from 'axios';
 import {useState, useEffect} from 'react';
 import {Link, link} from 'react-router-dom';
 
-const holi = 'http:://localhost:8000/blogs/'
+const holi = 'http://localhost:8000/'
 
 
 
@@ -20,7 +20,7 @@ const Compshowblogs =  () => {
 
    // procedimiento para eliminar un blog
    const deleteBlogs = async (id) => {
-      axios.delete("${holi}${id}")
+      axios.delete("{holi, id}")
       getBlogs()
    }
 
@@ -28,6 +28,7 @@ const Compshowblogs =  () => {
       <div className='container'>
           <div className='row'>
               <div className='col'>
+               <link to="/create" className='btn btn-primary mt-2 mb-2' > <li className="fas fa-plus"> </li> </link>
                   <table className='table'>
                       <thead className='table-primary'>
                          <tr>
@@ -42,8 +43,8 @@ const Compshowblogs =  () => {
                                <td>{blog.title}</td>
                                <td>{blog.content}</td>
                                <td>
-                                 <Link to={'/edit/$(blog.id)'} className="btn btn-info">Editar</Link>
-                                 <button onClick={ () =>deleteBlogs(blog.id)} className='btn btn-danger'>Eliminar</button>
+                                {  <Link to={'/edit/$(blog.id)'} className="btn btn-info"> <li className='fas fa-edit'></li>  </Link>  }
+                                 <button onClick={ () =>deleteBlogs(blog.id)} className='btn btn-danger'> <li className="fa-solid fa-trash" ></li> </button>
                                </td>
                             </tr>
                         ))}
