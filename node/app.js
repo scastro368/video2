@@ -1,5 +1,5 @@
 import express from "express";
-import cors from "cors";
+// import cors from "cors";
 // importamos la conexion a la base de datos
 import db from "./database/db.js"
 // importamos las rutas
@@ -7,7 +7,7 @@ import blogRoutes from "./routes/routes.js"
 
 const app = express() 
 
-app.use(cors())
+// app.use(cors())
 app.use(express.json())
 app.use('/blogs', blogRoutes)
 
