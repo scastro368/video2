@@ -18,7 +18,6 @@ function App() {
           <Route path='/create' element={ <CompCreateBlog/> } />
         </Routes>
       </BrowserRouter>
-     
     </div>
   );
 }

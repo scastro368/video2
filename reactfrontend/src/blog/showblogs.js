@@ -20,7 +20,7 @@ const Compshowblogs =  () => {
 
    // procedimiento para eliminar un blog
    const deleteBlogs = async (id) => {
-      axios.delete("{holi, id}")
+    await  axios.delete("{holi, id}")
       getBlogs()
    }
 

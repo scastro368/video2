@@ -2,7 +2,7 @@ import axios from "axios";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
-const holi = 'http://localhost:8000/'
+const holi = 'http://localhost:8000/blogs/'
 
 const CompCreateBlog = () => {
   const [title, setTitle] = useState('')
@@ -37,9 +37,8 @@ const CompCreateBlog = () => {
                       type="text"
                       className="form-control"
                    />
-               </div>
-
-          
+               </div>    
+                <button type="submit" className="btn btn-primary">Store</button>
         </form>
     </div>
    ) 
