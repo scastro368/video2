@@ -1,6 +1,7 @@
 import axios from "axios";
 import {useState, useEffect} from "react";
 import {useNavigate,useParams} from "react-router-dom";
+import '../App.css';
 
 const holi = 'http://localhost:8000/blogs/'
 
@@ -21,7 +22,7 @@ const ComEditBlogs = () => {
     }
     useEffect( () => {
         getBlogByid()
-    },[])
+    },)
 
     const getBlogByid = async () => {
       const res =  await axios.get(holi + id)

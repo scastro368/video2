@@ -1,7 +1,7 @@
 import axios from "axios";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
-
+import '../App.css';
 
 const holi = 'http://localhost:8000/blogs/'
 
